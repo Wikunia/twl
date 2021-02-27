@@ -1,0 +1,83 @@
+pre.hljl {
+    font-size: 90%;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: auto;
+    color: rgb(255,255,255); background-color: rgb(40,40,40); }
+pre.hljl > span.hljl-t { color: rgb(248,248,242); }
+pre.hljl > span.hljl-w { }
+pre.hljl > span.hljl-e { color: rgb(248,248,242); }
+pre.hljl > span.hljl-eB { color: rgb(150,0,80); background-color: rgb(30,0,16); }
+pre.hljl > span.hljl-o { }
+pre.hljl > span.hljl-k { color: rgb(102,217,239); }
+pre.hljl > span.hljl-kc { }
+pre.hljl > span.hljl-kd { }
+pre.hljl > span.hljl-kn { color: rgb(249,38,114); }
+pre.hljl > span.hljl-kp { }
+pre.hljl > span.hljl-kr { }
+pre.hljl > span.hljl-kt { color: rgb(13,45,126); }
+pre.hljl > span.hljl-n { color: rgb(248,248,242); }
+pre.hljl > span.hljl-na { color: rgb(166,226,46); }
+pre.hljl > span.hljl-nb { }
+pre.hljl > span.hljl-nbp { }
+pre.hljl > span.hljl-nc { color: rgb(166,226,46); }
+pre.hljl > span.hljl-ncB { color: rgb(102,217,239); }
+pre.hljl > span.hljl-nd { color: rgb(166,226,46); }
+pre.hljl > span.hljl-ne { }
+pre.hljl > span.hljl-neB { color: rgb(166,226,46); }
+pre.hljl > span.hljl-nf { color: rgb(166,226,46); }
+pre.hljl > span.hljl-nfm { color: rgb(166,226,46); }
+pre.hljl > span.hljl-np { }
+pre.hljl > span.hljl-nl { }
+pre.hljl > span.hljl-nn { }
+pre.hljl > span.hljl-no { color: rgb(166,226,46); }
+pre.hljl > span.hljl-nt { color: rgb(249,38,114); }
+pre.hljl > span.hljl-nv { }
+pre.hljl > span.hljl-nvc { }
+pre.hljl > span.hljl-nvg { }
+pre.hljl > span.hljl-nvi { }
+pre.hljl > span.hljl-nvm { }
+pre.hljl > span.hljl-l { color: rgb(174,129,255); }
+pre.hljl > span.hljl-ld { color: rgb(230,219,116); }
+pre.hljl > span.hljl-s { color: rgb(230,219,116); }
+pre.hljl > span.hljl-sa { color: rgb(230,219,116); }
+pre.hljl > span.hljl-sb { }
+pre.hljl > span.hljl-sc { }
+pre.hljl > span.hljl-sd { color: rgb(230,219,116); }
+pre.hljl > span.hljl-sdB { }
+pre.hljl > span.hljl-sdC { }
+pre.hljl > span.hljl-se { color: rgb(174,129,255); }
+pre.hljl > span.hljl-sh { }
+pre.hljl > span.hljl-si { color: rgb(249,72,62); }
+pre.hljl > span.hljl-so { color: rgb(255,187,0); }
+pre.hljl > span.hljl-sr { }
+pre.hljl > span.hljl-ss { }
+pre.hljl > span.hljl-ssB { }
+pre.hljl > span.hljl-nB { color: rgb(174,129,255); }
+pre.hljl > span.hljl-nbB { color: rgb(174,129,255); }
+pre.hljl > span.hljl-nfB { }
+pre.hljl > span.hljl-nh { }
+pre.hljl > span.hljl-ni { }
+pre.hljl > span.hljl-nil { }
+pre.hljl > span.hljl-noB { }
+pre.hljl > span.hljl-oB { color: rgb(249,38,114); }
+pre.hljl > span.hljl-ow { }
+pre.hljl > span.hljl-p { color: rgb(248,248,242); }
+pre.hljl > span.hljl-c { color: rgb(117,113,94); }
+pre.hljl > span.hljl-ch { color: rgb(117,113,94); }
+pre.hljl > span.hljl-cm { }
+pre.hljl > span.hljl-cp { }
+pre.hljl > span.hljl-cpB { color: rgb(117,113,94); }
+pre.hljl > span.hljl-cs { }
+pre.hljl > span.hljl-csB { }
+pre.hljl > span.hljl-g { }
+pre.hljl > span.hljl-gd { color: rgb(249,38,114); }
+pre.hljl > span.hljl-ge { font-style: italic; }
+pre.hljl > span.hljl-geB { }
+pre.hljl > span.hljl-gh { }
+pre.hljl > span.hljl-gi { color: rgb(166,226,46); }
+pre.hljl > span.hljl-go { }
+pre.hljl > span.hljl-gp { }
+pre.hljl > span.hljl-gs { font-weight: bold; }
+pre.hljl > span.hljl-gsB { color: rgb(117,113,94); }
+pre.hljl > span.hljl-gt { }

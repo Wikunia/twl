@@ -1,0 +1,5 @@
+[deps]
+Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
+Git = "d7ba0133-e1db-5d97-8f8c-041e4b3a1eb2"
+MD5 = "6ac74813-4b46-53a4-afec-0b5dc9d7885c"
+NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"

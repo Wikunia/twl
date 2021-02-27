@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ispage /tag/*}}
+  <meta name="description" content="All articles with tag: {{fill fd_tag}}"> 
+  {{else}}
+  {{isdef desc}} <meta name="description" content="{{fill desc}}"> {{end}}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+  <link rel="canonical" href="{{url}}" />
+  {{ ogp }}
+  {{end}}
+  {{if hasmath}} {{insert head_katex.html }}   {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+
+  <link href="/css/vela.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/opensources_74cc4b0d4d9cd3c.css">
+  <!-- <link rel="stylesheet" href="/css/OSTheme.css"> -->
+  <script src="/libs/vela/jquery.min.js"></script>
+  <script src="/libs/clipboard.min.js"></script> 
+  <link rel="icon" href="/assets/favicon.png">
+  {{ispage /tag/*}}
+    <title>Tag: {{fill fd_tag}}</title>
+  {{else}}
+    {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  {{end}}
+
+</head>
+<body>
+  <div class="main-nav" id="menu">
+    <div class="flex-container">
+      <span class="sidebar-brand">
+        <h3 style='font-size: 25px'><a href="http://twl.opensourc.es">TWL.OpenSourc.ES</a></h3>
+      </span>
+    </div> <!-- class="flex-container" -->
+
+    <nav class="sidebar-nav">
+      <ul class="metismenu"  id="metismenu" >
+        <li><a href="/index.html">Home</a></li>
+        <form id="lunrSearchForm" name="lunrSearchForm" action="/search/index.html">
+          <input class="search-input" name="q" placeholder="Enter search term" type="text">
+        </form>
+        <!--
+        {{navbar constraint-solver}}
+        {{navbar javis}}
+        {{navbar julia-basics}}
+        {{navbar side-gigs}}
+        {{navbar kaggle-santa}}
+        {{navbar blog}}
+        {{navbar simplex}}
+        {{navbar visualization}}
+        {{navbar neuro}}
+        {{navbar machine-learning}}
+        {{navbar mnist}}
+        -->
+      </ul>
+    </nav>
+  </div> <!-- main nav menu -->
+
+  <main id="panel">
+    <div class="toggle-button hamburger hamburger--spin">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    {{ispage /tag/*}}
+    <h1 class="page title">Tag: {{fill fd_tag}}</h1>
+    {{else}}
+    <h1 class="page title">{{isdef title}}{{fill title}}{{end}}</h1>
+    {{end}}
+    <hr>
+    {{ispage /blog/*}}
+    <p class="date">Creation date: {{fill date}}</p>
+    <p class="tags">Tags: {{show_tags}}</p>
+    {{end}}
+
+
+
+<!-- Content appended here -->
