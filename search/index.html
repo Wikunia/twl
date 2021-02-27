@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+  <link rel="canonical" href="https://opensourc.es/blog/" />
+  <meta property="og:url" content="search" />
+<meta property="og:title" content="Search ⋅ OpenSourc.ES" />
+<meta property="og:image" content="nothing" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:published_time" content="0001-01-01" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@opensourcesblog" />
+<meta name="twitter:creator" content="@opensourcesblog" />
+
+  
+  
+  
+
+  <link href="/css/vela.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/opensources_74cc4b0d4d9cd3c.css">
+  <!-- <link rel="stylesheet" href="/css/OSTheme.css"> -->
+  <script src="/libs/vela/jquery.min.js"></script>
+  <link rel="icon" href="/assets/favicon.png">
+  
+     <title>Search ⋅ OpenSourc.ES</title>  
+  
+
+</head>
+<body>
+  <div class="main-nav" id="menu">
+    <div class="flex-container">
+      <span class="sidebar-brand">
+        <h3 style='font-size: 25px'><a href="http://twl.opensourc.es">TWL.OpenSourc.ES</a></h3>
+      </span>
+    </div> <!-- class="flex-container" -->
+
+    <nav class="sidebar-nav">
+      <ul class="metismenu"  id="metismenu" >
+        <li><a href="/index.html">Home</a></li>
+        <form id="lunrSearchForm" name="lunrSearchForm" action="/search/index.html">
+          <input class="search-input" name="q" placeholder="Enter search term" type="text">
+        </form>
+        <!--
+        {{navbar constraint-solver}}
+        {{navbar javis}}
+        {{navbar julia-basics}}
+        {{navbar side-gigs}}
+        {{navbar kaggle-santa}}
+        {{navbar blog}}
+        {{navbar simplex}}
+        {{navbar visualization}}
+        {{navbar neuro}}
+        {{navbar machine-learning}}
+        {{navbar mnist}}
+        -->
+      </ul>
+    </nav>
+  </div> <!-- main nav menu -->
+
+  <main id="panel">
+    <div class="toggle-button hamburger hamburger--spin">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    
+    <h1 class="page title">Search ⋅ OpenSourc.ES</h1>
+    
+    <hr>
+    
+
+
+
+<!-- Content appended here --><div class="franklin-content"><p>Number of results found: <span id="resultCount"></span></p>
+
+<div id="searchResults"></div>
+
+                          
+
+<div class="page-foot">
+  <div>
+    <a href="/feed.xml">Subscribe to RSS</a>
+  </div>
+  <div class="copyright">
+    &copy; Ole Kröger. Last modified: February 27, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+  </div>
+</div></div><!-- CONTENT ENDS HERE -->
+  </main> <!-- end of id=main -->
+  <script src="/libs/vela/metisMenu.min.js"></script>
+  <script src="/libs/vela/slideout.min.js"></script>
+  <script src="/libs/lunr/lunr.min.js"></script>
+  <script src="/libs/lunr/lunr_index.js"></script>
+  <script src="/libs/lunr/lunrclient.min.js"></script>
+  <script>
+(function(){
+
+    // Get the elements.
+    // - the 'pre' element.
+    // - the 'div' with the 'paste-content' id.
+
+    var pre = document.getElementsByTagName('pre');
+
+    // Add a copy button in the 'pre' element.
+    // which only has the className of 'language-'.
+
+    for (var i = 0; i < pre.length; i++) {
+        var isLanguage = pre[i].children[0].className.indexOf('language-');
+
+        if ( isLanguage === 0 ) {
+            var button           = document.createElement('button');
+                    button.className = 'copy-button';
+                    button.textContent = 'Copy';
+
+                    pre[i].appendChild(button);
+        }
+    };
+
+    // Run Clipboard
+
+    var copyCode = new Clipboard('.copy-button', {
+        target: function(trigger) {
+            return trigger.previousElementSibling;
+    }
+    });
+
+    // On success:
+    // - Change the "Copy" text to "Copied".
+    // - Swap it to "Copy" in 2s.
+    // - Lead user to the "contenteditable" area with Velocity scroll.
+
+    copyCode.on('success', function(event) {
+        event.clearSelection();
+        event.trigger.textContent = 'Copied';
+        window.setTimeout(function() {
+            event.trigger.textContent = 'Copy';
+        }, 2000);
+
+    });
+
+    // On error (Safari):
+    // - Change the  "Press Ctrl+C to copy"
+    // - Swap it to "Copy" in 2s.
+
+    copyCode.on('error', function(event) {
+        event.trigger.textContent = 'Press "Ctrl + C" to copy';
+        window.setTimeout(function() {
+            event.trigger.textContent = 'Copy';
+        }, 5000);
+    });
+
+})();
+</script> 
+  
+  
+</body>
+</html>
