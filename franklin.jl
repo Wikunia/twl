@@ -23,7 +23,7 @@ function on_write(pg, fd_vars)
     end
 end
 
-function new_post(title; desc="", isjulia=true, categories=[], tags=[], overwrite=false)
+function new_post(title; desc="", isjulia=true, tags=[], overwrite=false)
     date = Dates.format(today(), "yyyy-mm-dd")
     y = Dates.format(today(), "yyyy")
     m = Dates.format(today(), "mm")
@@ -38,7 +38,6 @@ function new_post(title; desc="", isjulia=true, categories=[], tags=[], overwrit
         text *= "@def rss_category = \"julia\"\n"
     end
     text *= "@def tags = $tags\n"
-    text *= "@def categories = $categories\n"
     text *= "@def mintoclevel=2\n"
 
     folder = title
