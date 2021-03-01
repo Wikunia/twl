@@ -358,6 +358,15 @@ body {
   font-size: 0.8rem;
 }
 
+
+.post_author {
+  width: 705px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8rem;
+}
+
+
 .post-list-desc {
   color: #aaa;
 }

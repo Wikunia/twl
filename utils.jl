@@ -1,5 +1,5 @@
 using Franklin
-using Dates, MD5, Git, Random
+using Dates, Random
 using Base.Meta: isexpr
 
 # common
@@ -22,6 +22,7 @@ macro get(ex)
         var
     end)
 end
+
 macro get(ex, default)
     @assert isexpr(ex, :call)
     method = first(ex.args)
@@ -56,59 +57,12 @@ end
 
 html_img_click(src, alt) = "[![$(Franklin.htmlesc(alt))]($src)]($src)"
 
-function get_diff_urls(parts)
-    if startswith(parts[1], "http")
-        return parts[1], parts[2], length(parts) > 2 ? parts[3] : nothing
-    end
-end
-
-function lx_codediff(com, _)
-    # keep this first line
-    brace_content = Franklin.content(com.braces[1]) # input string
-    m = match(r"#= DIFF ([a-z]*)?\s*=#", brace_content)
-    before, after = strip.(split(brace_content, r"#= DIFF ([a-z]* )?=#"))
-    diff_type = m.captures[1] !== nothing ? Symbol(m.captures[1]) : :side
-    write("/tmp/before", before)
-    write("/tmp/now", after)
-
-    try
-        run(pipeline(`diff --unified=100 /tmp/before /tmp/now`,
-            pipeline(`diff2html -i stdin -o stdout -s side -f json -F /tmp/diff.json`, stdout="/tmp/out")))
-    catch e
-        # println("$e")
-    end
-    GitDiff.get_diff_md("/tmp/diff.json", diff_type)
-end
-
-function lx_showdiff(com, _)
-    # keep this first line
-    brace_content = Franklin.content(com.braces[1]) # input string
-    parts = strip.(split(brace_content, ','))
-    before, after, _ = get_diff_urls(parts)
-    GitDiff.show_diff(before, after)
-end
-
-function lx_showdifftype(com, _)
-    # keep this first line
-    brace_content = Franklin.content(com.braces[1]) # input string
-    parts = strip.(split(brace_content, ','))
-    before, after, _ = get_diff_urls(parts)
-    GitDiff.show_diff(before, after; diff_type=Symbol(type))
-end
-
 function lx_figclick(lx, _)
     # keep this first line
     brace_content = Franklin.content(lx.braces[1]) # input string
     alt, rpath = strip.(split(brace_content, ','))
     path  = Franklin.parse_rpath(rpath; canonical=false, code=true)
     return html_img_click(path, alt)
-end
-
-function lx_codelink(lx, _)
-    # keep this first line
-    brace_content = Franklin.content(lx.braces[1]) # input string
-    url, code = strip.(split(brace_content, '\n'; limit=2))
-    return "```\n$code\n``` ~~~<div class=\"code-links\"><a href=\"$url\" target=\"_blank\"><img src=\"../../assets/GitHub-Mark/PNG/GitHub-Mark-32px.png\" />See on GitHub</a></div>~~~"
 end
 
 function lx_version(lx, _)
