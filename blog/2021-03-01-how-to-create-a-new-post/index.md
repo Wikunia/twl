@@ -14,7 +14,7 @@ I'm Ole Kröger and I create some blogs posts on [opensourc.es](https://opensour
 
 This project here is a new idea of increasing the number of blog posts in the Julia community by encouraging you and others to add what you have learned. I want to make it as simple as possible to create a blog post for you and distribute it to a wide range of people.
 
-Not everyone of you need create their own blog when all you want is to mention to the world a small fascinating feature that they you have encountered today. This can range from a workflow of how to use your favorite IDE for Julia to new packages that you have found that you wish more people knew about. 
+Not everyone of you need to create a blog, which is a daunting task. Maybe you just want to share a small fascinating feature with the world. This can range from a workflow of how to use your favorite IDE for Julia to new packages that you have found that you wish more people knew about. 
 
 I would like to know what helps you to accomplish your goal and learn more about all the sides of the Julia community myself. 
 
@@ -29,11 +29,10 @@ There are a few steps you need to do to add your post to TWL!
 1. Fork [https://github.com/Wikunia/twl](https://github.com/Wikunia/twl)
 2. Clone the forked repo
 3. Start Julia
-4. Install [Revise.jl](https://github.com/timholy/Revise.jl) and [Franklin.jl](https://github.com/tlienart/Franklin.jl) if you haven't already 
-   1. This can be done with `] add Revise` and `] add Franklin` (`]` brings you into package mode)
-5. Run `includet("franklin.jl")`
-   1. the `t` in `includet` stands for tracking and makes sure that changes there are loaded for you automatically
-   2. `franklin.jl` makes it easier for you to preview your post and create the structure for your post.
+4. Install [Franklin.jl](https://github.com/tlienart/Franklin.jl) if you haven't already 
+   1. This can be done with `] add Franklin` (`]` brings you into package mode)
+5. Run `include("franklin.jl")`
+   1. `franklin.jl` makes it easier for you to preview your post and create the structure for your post.
 6. Run `new_post("TITLE_OF_YOUR_POST"; tags=["TAG1, TAG2"])`
    1. This post has the tag `create-new-post` such that one can click on the link next to `Tags` at the beginning of this post
       to see all the posts with the same tag. You want to check if posts similar to your already exist and use this as category markers like
@@ -41,7 +40,7 @@ There are a few steps you need to do to add your post to TWL!
 7. This creates a new folder in `blog` and in `_assets/blog` for images that you want to add to your post 
 8. You now want to update `@def post_author` with your name as well as `@def desc` and `@def rss` in the newly created `index.md`.
 9. You're ready for the preview? Run `serve_twl()` and click on the `localhost` url to see your the blog locally.
-10. Your new post should be the first on the homepage such that clicking on it will show you the changes you make to your new post appear live in your browser window.
+10. Your new post should is listed first on the homepage. If you click on it and then change the new `index.md` it will show you the updated post live in your browser window.
 11. Write your post :wink: More on that in a second
 12. Commit your changes and create a PR. 
 
