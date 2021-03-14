@@ -42,9 +42,9 @@ uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
 
 [[Franklin]]
 deps = ["Dates", "DelimitedFiles", "DocStringExtensions", "ExprTools", "FranklinTemplates", "HTTP", "Literate", "LiveServer", "Logging", "Markdown", "NodeJS", "OrderedCollections", "Pkg", "REPL", "Random"]
-git-tree-sha1 = "f07c66bfd5acb5a0b687a7282ee14f7f7e3c0cd4"
+git-tree-sha1 = "19e1fe4aec820a8e085b3f28415da2f8ba045ca3"
 uuid = "713c75ef-9fc9-4b05-94a9-213340da978e"
-version = "0.10.30"
+version = "0.10.33"
 
 [[FranklinTemplates]]
 deps = ["LiveServer"]
@@ -94,9 +94,9 @@ version = "2.8.0"
 
 [[LiveServer]]
 deps = ["Crayons", "FileWatching", "HTTP", "Pkg", "Sockets", "Test"]
-git-tree-sha1 = "7c2f32edab7941184a58ef56d589dac14e0ffa23"
+git-tree-sha1 = "ef2c43d4f768e24c7af5de03d64bcd6a9ddc2d48"
 uuid = "16fef848-5104-11e9-1b77-fb7a48bbb589"
-version = "0.6.0"
+version = "0.6.3"
 
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
@@ -138,9 +138,9 @@ version = "1.4.0"
 
 [[Parsers]]
 deps = ["Dates"]
-git-tree-sha1 = "50c9a9ed8c714945e01cd53a21007ed3865ed714"
+git-tree-sha1 = "223a825cccef2228f3fdbf2ecc7ca93363059073"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "1.0.15"
+version = "1.0.16"
 
 [[Pkg]]
 deps = ["Dates", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "UUIDs"]
