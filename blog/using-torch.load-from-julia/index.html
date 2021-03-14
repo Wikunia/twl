@@ -70,7 +70,7 @@
 
 
 <!-- Content appended here --><div class="franklin-content"><p>As part of an experiment we needed to solve a large quantity of linear inequalities described by the coefficient of a very sparse matrix. </p>
-<p>These coefficients were calculated using <a href="https://pytorch.org">PyTorch</a> by a collegue and, after solving them within <a href="https://www.python.org">Python</a> with an ad-hoc algorithm, I wanted to solve the system by using a LP solver via <a href="https://jump.dev">JuMP</a>.</p>
+<p>These coefficients were calculated using <a href="https://pytorch.org">PyTorch</a> by a colleague and, after solving them within <a href="https://www.python.org">Python</a> with an ad-hoc algorithm, I wanted to solve the system by using a LP solver via <a href="https://jump.dev">JuMP</a>.</p>
 <p>I&#39;m a novice of <a href="https://julialang.org/">Julia</a> but recently, on <a href="https://www.youtube.com/watch?v&#61;sLdlIs_e07E">the Beginners AMA featuring Dr. Katharine Hyatt and Dr. Rachel Kurchin</a>, I&#39;ve heard about an interesting package called <a href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a>. This provides the ability to call Python modules directly from Julia programs.</p>
 <p>The setup was quite easy, I just had to follow the instructions of <a href="https://github.com/JuliaPy/PyCall.jl/blob/master/README.md">PyCall.jl&#39;s README</a> about using a different version of Python as I have installed PyTorch in a Anaconda&#39;s environment.</p>
 <p>It was really easy, I just copied the path to the correct executable and before doing <code>add PyCall</code> I&#39;ve set the <code>PYTHON</code> environment variable directly from the Julia REPL then entered Pkg REPL-mode by pressing <code>&#93;</code> and finally added PyCall.    For a full description of the procedure everything is described in the README mentioned above.</p>
@@ -89,12 +89,12 @@ C &#61; sparse&#40;C_rows, C_cols, C_values&#41;</code></pre>
 </li>
 <li><p>Called torch.load as if I was in Python &#40;with the only difference that Julia doesn&#39;t allow for single quotes as string delimiters&#41; to load my data, which is a dictionary of tensors.</p>
 </li>
-<li><p>By reading PyCall&#39;s README I&#39;ve discovered that numpy&#39;s arrays are automatically converted into an interoperable array type in Julia. I just needed to add a &#43;1 as Julia&#39;s indexing starts from 1 by default and didn&#39;t really want to mess with <a href="https://docs.julialang.org/en/v1/devdocs/offset-arrays/">custom indices</a>.</p>
+<li><p>By reading PyCall&#39;s README I&#39;ve discovered that numpy&#39;s arrays are automatically converted into an interoperable array type in Julia. I just needed to add a &#43;1 as Julia&#39;s indexing starts from 1 by default and I didn&#39;t really want to mess with <a href="https://docs.julialang.org/en/v1/devdocs/offset-arrays/">custom indices</a>.</p>
 </li>
 <li><p>After I&#39;ve got all my data loaded I just needed to create my sparse matrix <code>C</code> using <code>sparse</code> from the <a href="https://docs.julialang.org/en/v1.5/stdlib/SparseArrays/"><code>SparseArrays</code> module of the Standard Library</a>.</p>
 </li>
 </ol>
-<p>So today we learned that Julia interpoperabilty with Python is quite easy, even with non standard modules like PyTorch, and that using Numpy&#39;s arrays to move data between languages is really neat and painless&#33;</p>
+<p>So today we learned that Julia&#39;s interoperability with Python is quite easy, even with non standard modules like PyTorch, and that using Numpy&#39;s arrays to move data between languages is really neat and painless&#33;</p>
                           
 
 <div class="page-foot">
