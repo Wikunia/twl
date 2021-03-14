@@ -12,7 +12,7 @@ As part of an experiment we needed to solve a large quantity of linear inequalit
 
 These coefficients were calculated using [PyTorch](https://pytorch.org) by a collegue and, after solving them within [Python](https://www.python.org) with an ad-hoc algorithm, I wanted to solve the system by using a LP solver via [JuMP](https://jump.dev).
 
-I'm a novice of [Julia](https://julialang.org/) but recently, on [the Beginners AMA featuring Dr. Katharine Hyatt and Dr. Rachel Kurchin on YouTube](https://www.youtube.com/watch?v=sLdlIs_e07E), I've heard about an interesting package called [PyCall.jl](https://github.com/JuliaPy/PyCall.jl). This provides the ability to call Python modules directly from Julia programs.
+I'm a novice of [Julia](https://julialang.org/) but recently, on [the Beginners AMA featuring Dr. Katharine Hyatt and Dr. Rachel Kurchin](https://www.youtube.com/watch?v=sLdlIs_e07E), I've heard about an interesting package called [PyCall.jl](https://github.com/JuliaPy/PyCall.jl). This provides the ability to call Python modules directly from Julia programs.
 
 The setup was quite easy, I just had to follow the instructions of [PyCall.jl's README](https://github.com/JuliaPy/PyCall.jl/blob/master/README.md) about using a different version of Python as I have installed PyTorch in a Anaconda's environment.
 
