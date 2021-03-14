@@ -4,7 +4,7 @@
   <description><![CDATA[Things we learned today about the Julia programming language
 ]]></description>
   <link>https://twl.opensourc.es/</link>
-  <atom:link href="https://twl.opensourc.es/feed.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="https://twl.opensourc.es/tag/pytorch/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[Using torch.load from Julia]]></title>
     <link>https://twl.opensourc.es/blog/2021-03-14-using-torch.load-from-julia/</link>
@@ -13,15 +13,6 @@
     <category>julia</category>
     <guid>https://twl.opensourc.es/blog/2021-03-14-using-torch.load-from-julia/</guid>
     <pubDate>Sun, 14 Mar 2021 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title><![CDATA[How to create a new post?]]></title>
-    <link>https://twl.opensourc.es/blog/2021-03-01-how-to-create-a-new-post/</link>
-    <description><![CDATA[How to create a new TWL post?
-<br><a href="https://twl.opensourc.es/blog/2021-03-01-how-to-create-a-new-post/">Read more</a>]]></description>
-    <category>julia</category>
-    <guid>https://twl.opensourc.es/blog/2021-03-01-how-to-create-a-new-post/</guid>
-    <pubDate>Mon, 1 Mar 2021 00:00:00 UT</pubDate>
   </item>
 </channel>
 </rss>

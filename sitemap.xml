@@ -3,25 +3,31 @@
 
 <url>
     <loc>https://twl.opensourc.es/404/index.html</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://twl.opensourc.es/blog/2021-03-01-how-to-create-a-new-post/index.html</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://twl.opensourc.es/index.html</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://twl.opensourc.es/search/index.html</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://twl.opensourc.es/blog/2021-03-14-using-torch.load-from-julia/index.html</loc>
+    <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
