@@ -10,7 +10,7 @@
 As part of an experiment we needed to solve a large quantity of linear inequalities described by the coefficient of a very sparse matrix. 
 
 
-These coefficients were calculated using [PyTorch](https://pytorch.org) by a collegue and, after solving them within [Python](https://www.python.org) with an ad-hoc algorithm, I wanted to solve the system by using a LP solver via [JuMP](https://jump.dev).
+These coefficients were calculated using [PyTorch](https://pytorch.org) by a colleague and, after solving them within [Python](https://www.python.org) with an ad-hoc algorithm, I wanted to solve the system by using a LP solver via [JuMP](https://jump.dev).
 
 I'm a novice of [Julia](https://julialang.org/) but recently, on [the Beginners AMA featuring Dr. Katharine Hyatt and Dr. Rachel Kurchin](https://www.youtube.com/watch?v=sLdlIs_e07E), I've heard about an interesting package called [PyCall.jl](https://github.com/JuliaPy/PyCall.jl). This provides the ability to call Python modules directly from Julia programs.
 
@@ -34,7 +34,7 @@ C = sparse(C_rows, C_cols, C_values)
 
 1. I've used `PyCall` to import the `torch` module from Python.
 2. Called torch.load as if I was in Python (with the only difference that Julia doesn't allow for single quotes as string delimiters) to load my data, which is a dictionary of tensors.
-3. By reading PyCall's README I've discovered that numpy's arrays are automatically converted into an interoperable array type in Julia. I just needed to add a +1 as Julia's indexing starts from 1 by default and didn't really want to mess with [custom indices](https://docs.julialang.org/en/v1/devdocs/offset-arrays/).
+3. By reading PyCall's README I've discovered that numpy's arrays are automatically converted into an interoperable array type in Julia. I just needed to add a +1 as Julia's indexing starts from 1 by default and I didn't really want to mess with [custom indices](https://docs.julialang.org/en/v1/devdocs/offset-arrays/).
 4. After I've got all my data loaded I just needed to create my sparse matrix `C` using `sparse` from the [`SparseArrays` module of the Standard Library](https://docs.julialang.org/en/v1.5/stdlib/SparseArrays/).
 
-So today we learned that Julia interpoperabilty with Python is quite easy, even with non standard modules like PyTorch, and that using Numpy's arrays to move data between languages is really neat and painless!
+So today we learned that Julia's interoperability with Python is quite easy, even with non standard modules like PyTorch, and that using Numpy's arrays to move data between languages is really neat and painless!
