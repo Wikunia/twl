@@ -192,16 +192,16 @@ end
 function hfun_newest_posts(params=[1,typemax(Int)])
     from, to = parse.(Int, params)
     rpaths = String[]
-    for file in keys(Franklin.ALL_PAGE_VARS)
-        if startswith(file, "blog/")
-            push!(rpaths, file)
-        end
+    list = readdir("blog")
+    for file in list
+        push!(rpaths, "blog/$file/index.md")
     end
 
     dates = Dates.Date[]
     for ref in rpaths
         push!(dates, pagevar(ref, "date"))
     end
+
     result = "<div>"
     order = sortperm(dates; rev=true)
     counter = 0
